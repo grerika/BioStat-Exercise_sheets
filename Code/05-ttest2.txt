@@ -1,0 +1,12 @@
+> t.test(before2,after2,paired=TRUE)
+
+        Paired t-test
+
+data:  before2 and after2
+t = -5.9822, df = 19, p-value = 9.324e-06
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.07829262 -0.03770738
+sample estimates:
+mean of the differences 
+                 -0.058 

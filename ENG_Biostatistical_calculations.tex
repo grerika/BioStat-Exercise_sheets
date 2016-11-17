@@ -1,0 +1,133 @@
+%\documentclass[oneside,a4paper]{memoir}
+\documentclass[a4paper,twoside]{memoir}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{babel}
+\usepackage{kpfonts}
+\setSingleSpace{1.1}
+\SingleSpacing
+\usepackage{xcolor,calc,wrapfig,tikz}
+\usepackage{enumerate,time,array}
+\usepackage{graphicx,booktabs,multicol}
+	\graphicspath{{./Plots/}}
+\usepackage[pdftex,colorlinks,linkcolor=blue]{hyperref}
+\usepackage{calc}
+\usepackage{fancyhdr, fancyvrb}
+\usepackage{listings}
+
+\renewcommand{\topfraction}{0.9}
+
+\lstset{basicstyle=\small\ttfamily,xleftmargin=10mm,xrightmargin=10mm}
+
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\definecolor{chaptercolor}{gray}{0.8}
+% helper macros
+\newcommand\numlifter[1]{\raisebox{-2cm}[0pt][0pt]{\smash{#1}}}
+\newcommand\numindent{\kern37pt}
+\newlength\chaptertitleboxheight
+\makechapterstyle{hansen}{
+  \renewcommand\printchaptername{\raggedleft}
+  \renewcommand\printchapternum{%
+    \begingroup%
+    \leavevmode%
+    \chapnumfont%
+    \strut%
+    \numlifter{\thechapter}%
+    \numindent%
+\endgroup%
+}
+  \renewcommand*{\printchapternonum}{%
+    \vphantom{\begingroup%
+      \leavevmode%
+      \chapnumfont%
+      \numlifter{\vphantom{9}}%
+      \numindent%
+      \endgroup}
+    \afterchapternum}
+  \setlength\midchapskip{0pt}
+  \setlength\beforechapskip{0.5\baselineskip}
+  \setlength{\afterchapskip}{3\baselineskip}
+  \renewcommand\chapnumfont{%
+    \fontsize{4cm}{0cm}%
+    \bfseries%
+    \sffamily%
+    \color{chaptercolor}%
+  }
+  \renewcommand\chaptitlefont{%
+    \normalfont%
+    \huge%
+    \bfseries%
+    \raggedleft%
+  }%
+  \settototalheight\chaptertitleboxheight{%
+    \parbox{\textwidth}{\chaptitlefont \strut bg\\bg\strut}}
+  \renewcommand\printchaptertitle[1]{%
+    \parbox[t][\chaptertitleboxheight][t]{\textwidth}{%
+      %\microtypesetup{protrusion=false}% add this if you use microtype
+      \chaptitlefont\strut ##1\strut}%
+}}
+\chapterstyle{hansen}
+\aliaspagestyle{chapter}{empty} 
+
+\setsecnumdepth{subsection}
+\setsecnumdepth{subsubsection}
+
+%\usepackage[automark,markcase=noupper,headsepline]{scrlayer-scrpage}
+\newcommand{\data}[1]{\texttt{#1}}
+\newcommand{\variable}[1]{\underline{\textnormal{#1}}}
+\fancypagestyle{DefaultStyle}{%
+	\fancyhf{}
+	\fancyhead[RO,LE]{\small Biostatistical calculations}
+	\fancyhead[LO,RE]{\small\leftmark}
+	\fancyfoot[RO,LE]{\thepage}
+	\renewcommand{\headrulewidth}{1pt}
+	\renewcommand{\footrulewidth}{1pt}
+}
+
+
+\pagestyle{DefaultStyle}
+
+
+\title{\textbf{\HUGE Biostatistical calculations}}
+\date{Last update: \today}
+\newcommand{\quest}{\data{quest\the\year.csv} }
+
+\makeatletter
+\renewcommand\tableofcontents{%
+    \@starttoc{toc}%
+}
+\makeatother
+
+\begin{document}
+	\begin{titlingpage}
+		\thispagestyle{empty}
+		\maketitle
+			\begin{center}
+				\includegraphics[width=0.5\textwidth]{Biostatistics}
+
+				\thispagestyle{empty}	
+		
+				\vfill
+				\includegraphics[width=0.3\textwidth]{Griff}
+			
+				University of Szeged\\
+				Department of Medical Physics and Informatics
+			\end{center}
+		\clearpage
+	
+		%\small
+		\tableofcontents
+	\end{titlingpage}\clearpage
+
+	\input{Parts/01-leiro-statisztika.tex}
+	\input{Parts/02-valoszinuseg.tex}
+	\input{Parts/03-konfidencia.tex}
+	\input{Parts/04-ttest.tex}
+	\input{Parts/05-korrelacio.tex}
+	\input{Parts/06-khinegyzet.tex}
+	\input{Parts/07-kappa-OR-RR.tex}
+	\input{Parts/08-not-practiced.tex}
+	
+	\input{Parts/99-Summary.tex}
+ \end{document}

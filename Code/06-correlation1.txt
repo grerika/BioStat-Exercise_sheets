@@ -1,0 +1,43 @@
+> cor.test(indep,dep)
+
+	Pearson's product-moment correlation
+
+data:  indep and dep
+t = 12.4003, df = 204, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.5699674 0.7271248
+sample estimates:
+      cor 
+0.6555883 
+
+> lm(dep~indep)   
+
+Call:
+lm(formula = dep ~ indep)
+
+Coefficients:
+(Intercept)        indep  
+  -103.1470       0.9698  
+
+> fit = lm ( dep ~ indep )
+> summary ( fit )
+
+Call:
+lm(formula = dep ~ indep)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-56.986  -5.681  -0.485   5.273  36.923 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -103.1470    13.5084  -7.636 8.51e-13 ***
+indep          0.9698     0.0782  12.400  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 9.946 on 204 degrees of freedom
+Multiple R-squared:  0.4298,	Adjusted R-squared:  0.427 
+F-statistic: 153.8 on 1 and 204 DF,  p-value: < 2.2e-16
+

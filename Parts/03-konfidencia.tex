@@ -1,0 +1,170 @@
+\chapter[Confidence intervals]{Confidence\\ intervals}
+\section[Confidence interval for the population mean if the population SD is known]{
+Confidence interval for the population mean ($\mu$) if the population standard deviation ($\sigma$) is known}
+
+\subsection{Assume that the heights of first year pharmaceutical students are normally distributed with a mean of $\mu = 175$ and a standard deviation of $\sigma=10$.}
+
+\begin{enumerate}[a)]
+\item What percentage of heights are above 175 cm? 	\hrulefill
+\item What percentage of heights are below 175 cm? 	\hrulefill
+\item What percentage of heights are between 155 and 195? 	\hrulefill
+\item What percentage of heights are below 155 cm? 	 \hrulefill
+\item Calculate the mean and the standard error of the mean of a sample of 36 cases derived from this population.
+
+	\begin{enumerate}[i)]
+	\item mean? \hrulefill
+	\item standard error? \hrulefill
+	\end{enumerate}
+
+\item The mean of another random sample with 36 number of cases is 172. 
+	\begin{enumerate}[i)]
+	\item Calculate the 95\% confidence interval.  \hrulefill
+	\item What is the meaning of the 95\% CI? \hrulefill
+	\item Compare the population mean with the 95\% CI calculated. 
+		Is the population mean included in the 95\% CI? \hrulefill
+	\end{enumerate}
+\end{enumerate}
+
+
+\section[Confidence interval for the population mean if the population SD is unknown]{
+Confidence interval for the population mean ($\mu$)
+if the population standard deviation ($\sigma$) is unknown
+}
+	
+	
+\subsection{(Example from Altman). In a trial we actually observed a mean serum albumin of 34.46 g/l with a standard deviation of 5.834 g/l from a sample of 21 patients with primary biliary cirrhosis. }
+
+
+%SE (standard error): \hrulefill
+\begin{enumerate}[a)]
+\item Find the 95\% confidence interval.
+
+	\begin{description}
+	\item[$\alpha:$] \hrulefill\quad n: 	\hrulefill
+	\item[mean:] \hrulefill\quad \textbf{SE:} \hrulefill
+	\item[degrees of freedom:]  \hrulefill\quad \textbf{$t_\alpha$:} \hrulefill
+	\item[mean - $t_\alpha$ SE:] \hrulefill \quad\quad \textbf{mean + $t_\alpha$ SE:} \hrulefill
+	\item[Confidence interval:] \hrulefill
+		
+		\textit{Meaning:} $\P(\hspace{3em}< \textrm{ true population mean } < \hspace{3em}) = 0.95$
+
+		We can be 95\% confident from this study that the true mean serum albumin among all such patients lies somewhere in the range \rule{15mm}{.4pt} to \rule{15mm}{.4pt} g/l, with 34.46 as our best estimate. This interpretation depends on the assumption that the sample of 21 patients is representative of all patients with the disease.
+	\end{description}
+
+\clearpage
+\item Find the 99\% confidence interval and compare to the 95\% CI.
+	\begin{description}
+	\item[$\alpha:$] \hrulefill\quad n: 	\hrulefill
+	\item[mean:] \hrulefill\quad \textbf{SE:} \hrulefill
+	\item[degrees of freedom:]  \hrulefill\quad \textbf{$t_\alpha$:} \hrulefill
+	\item[mean - $t_\alpha$ SE:] \hrulefill \quad\quad \textbf{mean + $t_\alpha$ SE:} \hrulefill
+	\item[Confidence interval:] \hrulefill
+		
+		Meaning: $\P(\hspace{3em}< \textrm{ true population mean } < \hspace{3em}) = 0.99$
+	\end{description}
+
+\item Suppose that the above data were observed from a sample of 210 patients. Find the 95% confidence interval.
+	\begin{description}
+	\item[$\alpha:$] \hrulefill\quad n: 	\hrulefill
+	\item[mean:] \hrulefill\quad \textbf{SE:} \hrulefill
+	\item[degrees of freedom:]  \hrulefill\quad \textbf{$t_\alpha$:} \hrulefill
+	\item[mean - $t_\alpha$ SE:] \hrulefill \quad\quad \textbf{mean + $t_\alpha$ SE:} \hrulefill
+	\item[Confidence interval:] \hrulefill
+	\end{description}		
+\end{enumerate}
+
+	
+
+
+	
+\subsection{In a study, systolic blood pressure of 10 healthy women was measured}
+Calculate the 95\% confidence interval for the population mean,  if the 
+
+\begin{itemize}
+ \item  mean was 119, the standard error was 0.664
+ 
+  \hrulefill
+ \item  mean was 119, the standard error was 2.1
+ 
+ 	\hrulefill
+\end{itemize}
+Compare the length of this confidence intervals!
+
+\noindent \hrulefill
+\subsection{Questions}
+
+	
+\begin{enumerate}[a)]
+\item Which is wider, a 95\% or a 99\% confidence interval? 	
+
+ \hrulefill
+\item   When you construct a 95\% confidence interval, what are you 95\% confident about? 	
+
+	 \hrulefill
+\item When computing a confidence interval, when do you use $t$ and when do you use $u$? 	
+
+\hrulefill
+\item What does the confidence interval width depend on? 	
+
+\hrulefill
+\end{enumerate}
+
+\clearpage
+
+\section{Calculations with R}
+
+\subsection{Calculate the following statistics for \variable{mass} using the \quest!}
+
+\begin{description}
+\item[Sample size: ] \hrulefill \quad \textbf{Mean:} \hrulefill
+\item[Standard deviation: ] \hrulefill \quad \textbf{Standard error:} \hrulefill
+\end{description}
+
+\begin{enumerate}[a)]
+\item Assuming that the variable mass follows a normal distribution, determine the 
+	\begin{enumerate}[i)]
+	\item 95\% confidence interval: \hrulefill
+	\item 99\% confidence interval: \hrulefill 	
+	\end{enumerate}
+\item Can we state that the mean body mass in the population of students is 70? 	
+
+  \hrulefill	
+
+	Explain. \hrulefill
+\end{enumerate}
+
+
+\subsection{Calculate the following statistics for \variable{height} using the \quest!}
+
+\begin{description}
+\item[Sample size: ] \hrulefill \quad \textbf{Mean:} \hrulefill
+\item[Standard deviation: ] \hrulefill \quad \textbf{Standard error:} \hrulefill
+\end{description}
+
+\begin{enumerate}[a)]
+\item Assuming that the variable height follows a normal distribution, determine the 
+	\begin{enumerate}[i)]
+	\item 95\% confidence interval: \hrulefill
+	\item 99\% confidence interval: \hrulefill 	
+	\end{enumerate}
+\item Can we state that the mean height in the population of students is 170? 	
+
+  \hrulefill	
+
+	Explain. \hrulefill
+\end{enumerate}
+
+\section{Homework}
+
+\subsection{A researcher set a 95\% confidence interval on the mean length of fish in a recreational lake and found it to be from 6.2 to 8.7 inches.} 
+\textbf{Which of the following is a proper interpretation of this interval?}
+
+\begin{enumerate}[(A)]
+\item Of the fish in the recreational lake, 95\% are between 6.2 and 8.7 inches long.
+\item We are 95\% confident that the sample mean length of fish in the recreational lake is between 6.2 and 8.7 inches.
+\item We are 95\% confident that the population mean length of fish in the recreational lake is between 6.2 and 8.7 inches.
+\item There is a 95\% chance that a randomly selected fish from the recreational lake will be between 6.2 and 8.7 inches.
+\end{enumerate}
+
+\subsection{An industrial designer wants to determine the average amount of time it takes an adult to assemble an ''easy to assemble'' toy. A sample of 16 times yielded an average time of 19.92 minutes, with a sample standard deviation of 5.73 minutes. Assuming normality of assembly times, provide a 95\% confidence interval for the mean assembly time.}
+	

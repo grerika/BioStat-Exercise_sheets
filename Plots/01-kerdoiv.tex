@@ -1,0 +1,69 @@
+\documentclass[10pt,a5paper,fleqn]{scrreprt}
+\usepackage[utf8]{inputenc}
+% encoding & language
+\usepackage{selinput}
+\SelectInputMappings{}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[babel, german=quotes]{csquotes}
+
+% questionary 
+\usepackage{paperandpencil}
+\usepackage[top=0.8cm,bottom=0.8cm,left=1cm,right=1cm]{geometry}
+
+\begin{document}\small
+
+
+\question{\bf Identification number} \xxxbox
+
+\question{\bf Gender}
+
+\begin{enumerate}
+\item male
+\item female
+\end{enumerate}
+
+\question{\bf Age (in years)}
+\xxbox
+
+\question{\bf Education}
+
+\begin{enumerate}
+\item no
+\item primary
+\item secondary
+\item university
+\end{enumerate}
+
+
+\question{\bf Body mass (kg)}
+\xxxbox
+
+\question{\bf Height (cm)}
+\xxxbox
+
+\question{\bf Eye colour}
+
+\begin{enumerate}
+\item blue
+\item green
+\item grey
+\item brown
+\item black
+\item other%: \linetext{}
+\end{enumerate}
+
+\question{\bf Hobby}
+
+\hspace*{-1em}
+\begin{answersB}
+\item sport
+\item music listening
+\item collecting stamps
+\item dancing
+\item fine arts
+\item other%: \linetext{}
+\end{answersB}
+\vfill
+
+\end{document}

@@ -1,0 +1,313 @@
+\chapter{Summary of the methods}
+%\fancyhead[LO,RE]{\textsc{Summary of the methods}}
+
+\begin{enumerate}
+\item\label{both-cont}
+ both are continuous (measured on the same subject):
+ 
+ 	\begin{enumerate}
+	\item comparing the means of variables – the same thing about the same subjets, examining mean change: \textbf{paired t-test}
+	\item  examining relationships between variables: \textbf{correlation, regression}
+	\end{enumerate}
+\item\label{one-cont} one continuous dependent variable divided into independent groups according to another, categorical variable: (that is, comparing means of groups)
+
+	\begin{enumerate}
+	\item number of groups=2: \textbf{two-sample t-test} (Independent t-test)
+	\item number of groups>2: \textbf{One-way ANOVA} (Analysis of Variance)
+	\end{enumerate}
+\item both are categorical: examination of contingency tables, \textbf{$\chi^2$ test}
+\end{enumerate}
+
+\noindent In \ref{both-cont}. and \ref{one-cont}. we assumed that the samples come from normal distribution. If this assumption does not hold or we have ordered data, use \textbf{nonparametric methods based on ranks}.
+
+\vfill
+\section{Manual calculation}
+
+\subsection{Effect of a new drug}
+To test the effect of a new drug, the temperature was measured on the same 10 patients before and after the treatment. The mean of the differences is = 0.6, the standard deviation of the differences is SD=0.4062. Test whether the drug is effective or not; i.e., test whether the change in mean is different from 0 at $\alpha$=0.05 level.
+
+\begin{enumerate}[a)]
+	\item To test the effect of the drug, what is the appropriate test?\hrulefill
+
+	Assumption(s)?\hrulefill
+
+	\item 
+	State the null and the alternative hypothesis
+		
+		H$_0$:	\hrulefill\\
+		H$_A$:	\hrulefill
+
+	\item Find the degrees of freedom: \hrulefill
+		\quad
+	standard error: \hrulefill
+
+
+	test statistic: \hrulefill
+		\quad
+	critical value: \hrulefill
+
+	\item Decide whether the difference is significant or not: \hrulefill
+
+
+		State a conclusion: \hrulefill
+
+	\item \emph{Alternative solution using confidence interval}
+
+	Find the 95\% confidence interval: \hrulefill
+
+	Decide whether the difference is significant or not: \hrulefill
+
+	Conclusion: \hrulefill
+\end{enumerate}
+
+
+\subsection{Drug side effect}
+Two medicines are being compared regarding a particular side effect; 100 similar patients are split randomly into two groups, one of each group. In the group of drug A, 10 side effects were observed while in the group of drug B only 2 side effects were observed. Test whether drug and side effects are independent!\bigskip
+
+	\begin{tabular}{c|cc|c}
+	\toprule
+		&\multicolumn{2}{c|}{\textbf{SIDE EFFECTS}}\\
+	\textbf{DRUG}	&\textbf{yes}	&\textbf{no}	&{\color{white} Total}\\
+	\midrule
+	\textbf{A}	&	&	&\\
+	\textbf{B}	&	&	&\\
+	\midrule
+				&		&\\
+	\bottomrule
+	\end{tabular}
+\begin{enumerate}[a)]
+	\item Give the percentage of side effects in 
+	
+		group A: \hrulefill\quad group B:  \hrulefill
+	\item What is the appropriate test? 
+	
+		\hrulefill 
+		
+
+			Assumption(s) of the test:
+		
+		\hrulefill
+	\item State the null and the alternative hypothesis
+	
+	H$_0$: 	\hrulefill 	\\
+	H$_A$: \hrulefill 	
+	
+\item
+	Find the test statistic: \hrulefill
+	
+\item
+	Find the degrees of freedom: 	\hrulefill \quad Critical value ($\alpha=0.05$): \hrulefill 	
+
+
+	\item Decide whether the difference is significant or not:\\
+	
+	 \hrulefill 	
+	
+	\item
+	State a conclusion:
+	
+	 \hrulefill 	
+	
+	
+	\end{enumerate}
+	
+	
+\subsection{Association}
+Based on 11 pairs of data, the coefficient of correlation is r=0.8. Is the correlation significant at 5\% level? What is your opinion about the direction and about the strength of the association? 	
+
+
+\begin{enumerate}[a)]
+	\item State the null and the alternative hypothesis
+	
+	H$_0$: 	\hrulefill 	\\
+	H$_A$: \hrulefill 	
+	
+	\item Find the test statistic: \hrulefill
+	
+	\item Find the degrees of freedom: 	\hrulefill \quad Critical value: \hrulefill 	
+
+
+	\item		Decision
+	
+	 \hrulefill 	
+	
+	\item
+Interpretation
+	
+	 \hrulefill 	
+	
+	
+	\end{enumerate}
+	
+	
+	\vfill\clearpage
+	 	
+\section{Calculation using R}
+
+Open the file \data{quest2016.csv}. This file contains data of first year medical students.
+\subsection{Examine the relationship between ideal body mass and body mass}
+Examine the relationship between the body mass (\variable{mass}) and the ideal body mass (\variable{ideal\_mass})! Let the present mass be the independent variable. Is there a linear relationship between body mass at present and ideal body mass?
+
+
+\begin{enumerate}[a)]
+	\item The name of the appropriate test:	
+				\hrulefill 
+				
+		Assumption(s) of the test: \hrulefill
+				
+	\item	State the null and the alternative hypothesis
+			
+			H$_0$: 	\hrulefill 	\\
+			H$_A$: \hrulefill 	
+	\item
+	
+		$r=$  \rule{15mm}{.4pt}	\quad it's meaning: \hrulefill
+
+		$p$-value:\hrulefill 	
+		
+	\item Significance (decision): \hrulefill
+				
+		Explain your result in the context of the problem: \hrulefill
+	
+		 \hrulefill
+						
+	\item Equation of the line: \hrulefill 	
+		
+		
+		
+			Based on the equation, find the ideal body mass to a 60~kg  (actual) mass: \hrulefill 
+					
+			 \hrulefill
+				
+ \end{enumerate}
+ 
+ 
+ \subsection{Mean change of mass}
+ Students were asked about they body mass at present (variable \variable{mass}) and body weight 3 years ago (\variable{mass3}). Find whether the mean change of mass is significant or not at 5\% level.
+ 
+ 
+ \begin{enumerate}[a)]
+ 			\item The name of the appropriate test:	
+				\hrulefill 
+				
+			\item
+					Assumption(s) of the test: \hrulefill
+				
+				\hrulefill
+			\item		
+			State the null and the alternative hypothesis
+			
+			H$_0$: 	\hrulefill 	\\
+			H$_A$: \hrulefill 	
+			\item \emph{Descriptive statistics}
+			
+			
+				\begin{large}
+					\begin{center}
+						\begin{tabular}{l||l|l|l}
+						\toprule
+						variable		& mean	& standard deviation & sample size\\
+						\midrule
+						mass		&&&\\
+									&&&\\
+						mass3	&&&\\
+						\bottomrule
+						\end{tabular}
+					\end{center}						
+				\end{large}
+
+			\item \emph{Result of the test}
+				\\
+				
+				test statistic: \rule{30mm}{.4pt}	degrees of freedom:  \rule{30mm}{.4pt}	$p$ -value: \hrulefill
+				\\
+
+					Decision: 	\hrulefill
+		
+			\item Explain your result in the context of the problem:
+			
+			 \hrulefill
+
+\end{enumerate}
+
+
+
+
+ \subsection{Age of boys and girls}
+Compare the mean age of boys and girls! (variables \variable{age}, \variable{gender})
+ 
+ \begin{enumerate}[a)]
+ 			\item The name of the appropriate test:	
+				\hrulefill 
+				
+			\item
+					Assumption(s) of the test: \hrulefill
+				
+				\hrulefill
+			\item		
+			State the null and the alternative hypothesis
+			
+			H$_0$: 	\hrulefill 	\\
+			H$_A$: \hrulefill 	
+			\item \emph{Descriptive statistics}
+			
+			
+				\begin{large}
+					\begin{center}
+						\begin{tabular}{l||l|l|l}
+						\toprule
+								& mean	& standard deviation & sample size\\
+						\midrule
+						boy	&&&\\
+									&&&\\
+						girl	&&&\\
+						\bottomrule
+						\end{tabular}
+					\end{center}						
+				\end{large}
+
+			\item \emph{Result of the test}
+				\\
+				
+				test statistic: \rule{30mm}{.4pt}	degrees of freedom:  \rule{30mm}{.4pt}	$p$ -value: \hrulefill
+				\\
+
+					Decision: 	\hrulefill
+		
+			\item Explain your result in the context of the problem:
+			
+			 \hrulefill		
+			 
+			 \item (Result of the test of equality of variances: \hrulefill)	
+	
+\end{enumerate}
+
+
+
+\subsection{Eye color and gender}
+Examine the relationship between the answers of eye color and gender. Is the gender and eye color of students independent (variable \variable{gender} and \variable{eye})?
+
+\begin{enumerate}[a)]
+	\item What is the appropriate test? 	\hrulefill
+	
+	\item		
+			State the null and the alternative hypothesis
+			
+			H$_0$: 	\hrulefill 	\\
+			H$_A$: \hrulefill 	
+
+
+	\item \emph{Descriptive statistics: 	}
+	\vspace{5em}
+
+	\item What is the assumption of the test? \hrulefill
+	
+	 	Does it come true? \hrulefill
+	 	
+	 \item Find the degrees of freedom: \hrulefill\quad
+		 the test statistic: \hrulefill\quad 
+		 critical value: \hrulefill\quad 
+		 p-value: 	\hrulefill\quad
+	\item State a conclusion: \hrulefill
+	
+\end{enumerate}

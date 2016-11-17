@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{pst-plot}
+\begin{document}
+
+\begin{pspicture}(-1,-1)(5,10)
+\psset{yunit=0.1,fillstyle=solid}
+\psaxes[dy=1cm,Dy=10,ticksize=4pt 0,axesstyle=frame,labels=y](0,0)(4,90)
+\rput(1,0){\psBoxplot[arrowlength=0.5,fillcolor=blue!30]{
+   20  25  25  27  28  31  33  34  36  37  44  50  59  85  86}}\rput(1,10){f\'erfi}
+\rput(3,0){\psBoxplot[fillcolor=red!30]{
+   5  7  10  14  18  19  25  29  31  33}}\rput(3,40){n\H{o}}
+\end{pspicture}
+\end{document}

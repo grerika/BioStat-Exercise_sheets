@@ -1,0 +1,45 @@
+\documentclass[border=5mm]{standalone}
+\usepackage{filecontents}
+\usepackage{pgfplots, pgfplotstable}
+\usepgfplotslibrary{statistics}
+
+\begin{filecontents}{data-no.csv}
+dist
+5
+7
+10
+14
+18
+19
+25
+29
+31
+33
+\end{filecontents}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    ymin=0,
+    xmin=0
+]
+\addplot +[red!50!black,fill=red,
+    hist={
+        bins=4,
+        data min=0,
+        data max=40
+    }   
+] table [y index=0] {data-no.csv};
+\end{axis}
+\end{tikzpicture}
+
+\vspace{-8em}
+\begin{tabular}{l}
+SD = 10.13\\ 
+Mean = 19\\
+N = 10
+\end{tabular}
+
+
+\end{document}

@@ -1,0 +1,406 @@
+\chapter[$\chi^2$-test for independence]{$\chi^2$-test for\\ independence}
+\section[Medical check-up vs. gender]{In a (hypothetical) study, the relationship between gender and participation in annual medical check-ups was examined. The results are summarized in the following $2\times 2$ contingency table (observed frequencies).}
+
+\begin{center}\small
+	\begin{tabular}{c|C{2cm}C{2cm}|c}
+	\toprule
+	\multicolumn{4}{c}{\textit{Observed frequencies}}\\
+	\midrule
+		&\multicolumn{2}{c|}{\textbf{Medical check-ups}}\\
+		&\multicolumn{2}{c|}{\textbf{within the last 1 year}}	\\
+	\textbf{GENDER}	&\textbf{yes}	&\textbf{no}	&Total\\
+	\midrule
+	\textbf{male}	&15	&40	&55\\
+	\textbf{female}		&25	&20	&45\\
+	\midrule
+	Total&40	&60	&100\\
+	\bottomrule
+	\end{tabular}
+	\hfill	\begin{tabular}{c|C{2cm}C{2cm}|c}
+	\toprule
+	\multicolumn{4}{c}{\textit{Expected frequencies}}\\
+	\midrule
+		&\multicolumn{2}{c|}{\textbf{Medical check-ups}}\\
+		&\multicolumn{2}{c|}{\textbf{within the last 1 year}}	\\
+		\textbf{GENDER}	&\textbf{yes}	&\textbf{no}	&Total\\
+		\midrule
+		\textbf{male}	&	&	&55\\
+		\textbf{female}		&	&	&45\\
+		\midrule
+		Total&40	&60	&100\\
+		\bottomrule
+		\end{tabular}
+\end{center}
+
+\noindent\textbf{Is participation in routine medical check-ups independent of gender at the 5\% significance level?}
+ 
+\begin{enumerate}[a)]
+\item \textit{Participation rate among}  
+
+	males: \hrulefill \quad females: 	\hrulefill
+\item The name of the appropriate test  \hrulefill
+\item H$_0$: \hrulefill 	
+
+	H$_A$: \hrulefill
+
+
+	 Assumption(s) of the test:  \hrulefill
+
+$
+\displaystyle	\chi^2 =\sum_i \frac{(\textrm{observed}_i-\textrm{expected}_i)^2}{\textrm{expected}_i}=
+$
+
+\item Degrees of freedom: (number of rows - 1)$\cdot$(number of columns - 1)= \hrulefill\quad	 Critical value: \hrulefill	
+\item Decision: 	\hrulefill
+
+	Conclusion: \hrulefill
+\end{enumerate}
+
+\section[Drug vs. side effect]{ Two medicines are being compared regarding a particular side effect, 60 similar patients are split randomly into two groups, one on each drug. The results are presented in the observed frequencies table}
+
+
+\begin{center}\small
+	\begin{tabular}{c|C{15mm}C{15mm}|c}
+		\toprule
+		\multicolumn{4}{c}{\textit{Observed frequencies}}\\
+		\midrule
+			&\multicolumn{2}{c|}{\textbf{SIDE EFFECT}}\\
+		\textbf{DRUG}	&\textbf{yes}	&\textbf{no}	&Total\\
+		\midrule
+		\textbf{A}	&10	&20	&30\\
+		\textbf{B}	&5	&25 &30\\
+		\midrule
+		Total	&15	&45	&60\\
+		\bottomrule
+	\end{tabular}
+	\hfill
+	\begin{tabular}{c|C{15mm}C{16mm}|c}
+		\toprule
+		\multicolumn{4}{c}{\textit{Expected frequencies}}\\
+		\midrule
+			&\multicolumn{2}{c|}{\textbf{SIDE EFFECT}}\\
+		\textbf{DRUG}	&\textbf{yes}	&\textbf{no}	&Total\\
+		\midrule
+		\textbf{A}	&	&	&30\\
+		\textbf{B}	&	& &30\\
+		\midrule
+		Total	&15	&45	&60\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+
+\noindent\textbf{Are drug type and the occurrence of side effect independent at the 5\% level?}
+
+\begin{enumerate}[a)]
+\item \textit{Percentage of people who had side effect taking}  
+
+	drug A: \hrulefill \quad
+	drug B 	\hrulefill
+\item The name of the appropriate test:  \hrulefill
+\item H$_0$: \hrulefill 	
+
+ H$_A$: \hrulefill
+
+
+
+Assumption(s) of the test: \hrulefill
+
+
+$
+\displaystyle	\chi^2 =\sum_i \frac{(\textrm{observed}_i-\textrm{expected}_i)^2}{\textrm{expected}_i}=
+$
+
+\item Degrees of freedom: (number of rows - 1)$\cdot$(number of columns - 1)= \hrulefill\quad	 Critical value: \hrulefill	
+\item Decision: 	\hrulefill
+
+	Conclusion: \hrulefill
+\end{enumerate}
+
+\section[Voting vs. age]{In a certain town, there are about 10\ 000 eligible voters. A random sample of 500 eligible voters was chosen to study the relationship between age and participation in the last election. The results are summarized in the following 3$\times$2- contingency table}
+
+%Egy bizonyos expectedosban kb. 10\,000 szavazásra jogosult él.  Egy 500~főből álló véletlen minta alapján vizsgálták az életkor és a legutóbbi szavazáson való részvétel közötti kapcsolatot.  Az eredményeket a következő 3$\times$2-es gyakorisági táblázat tartalmazza.}
+
+
+\begin{center}\small
+	\begin{tabular}{c|C{15mm}C{15mm}|c}
+	\toprule
+		\multicolumn{4}{c}{\textit{Observed frequencies}}\\
+	\midrule
+		&\multicolumn{2}{c|}{\textbf{PARTICIPATION}}\\
+	\textbf{AGE GROUP}	&\textbf{yes}	&\textbf{no}	&Total\\
+	\midrule
+	\textbf{Under age 40}	& 90	& 60	& 150\\
+	\textbf{40 -- 60}		& 130	& 70	& 200\\
+	\textbf{Above age 60}	& 120	& 30	& 150\\
+	\midrule
+	Total				& 340	& 160	& 500\\
+	\bottomrule
+	\end{tabular}
+	\hfill
+	\begin{tabular}{c|C{15mm}C{15mm}|c}
+	\toprule
+		\multicolumn{4}{c}{\textit{Expected frequencies}}\\
+	\midrule
+		&\multicolumn{2}{c|}{\textbf{PARTICIPATION}}\\
+	\textbf{AGE GROUP}	&\textbf{yes}	&\textbf{no}	&Total\\
+	\midrule
+	\textbf{Under age 40}	& 	& 	& 150\\
+	\textbf{40 -- 60}	& 	& 	& 200\\
+	\textbf{Above age 60}	& 	& 	& 150\\
+	\midrule
+	Total			& 340	& 160	& 500\\
+	\bottomrule
+	\end{tabular}
+\end{center}
+
+\noindent \textbf{Is there a relationship between age group and having voted in the last election ($\alpha = 0.05$)? }
+
+\begin{enumerate}[a)]
+\item \textit{Participation rate}  
+
+	Under age 40: \hrulefill \quad
+	Between age 40 and 60: 	\hrulefill\quad
+	Above age 60: \hrulefill
+\item The name of the appropriate test:  \hrulefill
+\item H$_0$: \hrulefill 	
+
+	 H$_A$: \hrulefill
+
+
+Assumption(s) of the test: \hrulefill
+
+
+$
+\displaystyle	\chi^2 =\sum_i \frac{(\textrm{observed}_i-\textrm{expected}_i)^2}{\textrm{expected}_i}=
+$
+
+\item Degrees of freedom: (number of rows - 1)$\cdot$(number of columns - 1)= \hrulefill\quad	 Critical value: \hrulefill	
+\item Decision: 	\hrulefill
+
+	Conclusion: \hrulefill
+\end{enumerate}
+
+\section[Aspirin vs. thrombi]{The following observed frequency table shows the results of placebo and aspirin treatments in an experiment, with the number of people in each treatment group who did and did not develop thrombi. Decide whether the aspirin had an effect on thrombus formation.}
+
+
+\begin{center}\small
+	\begin{tabular}{c|C{2cm}C{2cm}|c}
+	\toprule
+		\multicolumn{4}{c}{\textit{Observed frequencies}}\\
+	\midrule
+		&\multicolumn{2}{c|}{\textbf{Developed thrombi?}}\\
+						&\textbf{yes}	&\textbf{Nem}	&Total\\
+	\midrule
+	\textbf{Placebo}	&16	&4	&20\\
+	\textbf{Aspirin}	&6	&14 &20\\
+	\midrule
+	Total			&22	&18	&40\\
+	\bottomrule
+	\end{tabular}
+	\hfill
+		\begin{tabular}{c|C{2cm}C{2cm}|c}
+		\toprule
+			\multicolumn{4}{c}{\textit{Expected frequencies}}\\
+			\midrule
+			&\multicolumn{2}{c|}{\textbf{Developed thrombi?}}\\
+							&\textbf{yes}	&\textbf{Nem}	&Total\\
+		\midrule
+		\textbf{Placebo}	&	&	&20\\
+		\textbf{Aszpirin}	&	& &20\\
+		\midrule
+		Total			&22	&18	&40\\
+		\bottomrule
+		\end{tabular}
+\end{center}
+
+
+
+\begin{enumerate}[a)]
+\item \textit{The thrombus formation rate in the\dots}  
+
+	placebo group: \hrulefill \quad 	aspirin group: \hrulefill
+\item The name of the appropriate test:  \hrulefill
+\item H$_0$: \hrulefill 	
+
+	H$_A$: \hrulefill
+
+
+ Assumption(s) of the test: \hrulefill
+
+\item Test-statistic:  
+
+$
+\displaystyle	\chi^2 =\sum_i \frac{(\textrm{observed}_i-\textrm{expected}_i)^2}{\textrm{expected}_i}=
+$
+
+\item Degrees of freedom: (number of rows - 1)$\cdot$(number of columns - 1)= \hrulefill\quad	 Critical value: \hrulefill	
+\item Decision: 	\hrulefill
+
+	Conclusion: \hrulefill
+\end{enumerate}
+
+
+\section[Gender vs. pleased]{Examine the relationship between the answers of \variable{pleased} and \variable{gender}. Are the answers to the question ''Are you pleased with using a statistical software?'' independent of gender? Use the \quest dataset!}
+
+
+
+\begin{center}\small
+	\begin{tabular}{c|C{2cm}C{2cm}|c}
+	\toprule
+		\multicolumn{4}{c}{\textit{Observed frequencies}}\\
+	\midrule
+		&\multicolumn{2}{c|}{\textbf{PLEASED}}\\
+	\textbf{GENDER}	&\textbf{yes}	&\textbf{no}	&Total\\
+	\midrule
+	\textbf{male}	&	& &\\
+	\textbf{female}	&	& &\\
+	\midrule
+	Total			&	&	&\\
+	\bottomrule
+	\end{tabular}
+	\hfill
+		\begin{tabular}{c|C{2cm}C{2cm}|c}
+		\toprule
+			\multicolumn{4}{c}{\textit{Expected frequencies}}\\
+			\midrule
+			&\multicolumn{2}{c|}{\textbf{PLEASED}}\\
+		\textbf{GENDER}	&\textbf{yes}	&\textbf{no}	&Total\\
+		\midrule
+		\textbf{male}	&	& &\\
+		\textbf{female}	&	& &\\
+		\midrule
+		Total			&	&	&\\
+		\bottomrule
+		\end{tabular}
+\end{center}
+
+
+
+\begin{enumerate}[a)]
+\item The name of the appropriate test:  \hrulefill
+\item H$_0$: \hrulefill 	
+
+	H$_A$: \hrulefill
+
+ Assumption(s) of the test: \hrulefill
+
+\item $\chi^2=$ \hrulefill\quad Degrees of freedom= \hrulefill\quad $p=$ \hrulefill
+\item Fisher's exact $p$-value: \hrulefill 
+\item Decision: 	\hrulefill
+	
+	Conclusion: \hrulefill
+\end{enumerate}
+
+
+\section[Gender vs. difficult]{Examine whether the answers to the question ''Is biostatistics difficult'' depend on gender.}
+
+
+
+\begin{center}\small
+	\begin{tabular}{c|C{2cm}C{2cm}|c}
+	\toprule
+		\multicolumn{4}{c}{\textit{Observed frequencies}}\\
+	\midrule
+		&\multicolumn{2}{c|}{\textbf{DIFFICULT}}\\
+		\textbf{GENDER}	&\textbf{yes}	&\textbf{no}	&Total\\
+	\midrule
+	\textbf{male}	&	& &\\
+	\textbf{female}	&	& &\\
+	\midrule
+	Total			&	&	&\\
+	\bottomrule
+	\end{tabular}
+	\hfill
+		\begin{tabular}{c|C{2cm}C{2cm}|c}
+		\toprule
+			\multicolumn{4}{c}{\textit{Expected frequencies}}\\
+			\midrule
+			&\multicolumn{2}{c|}{\textbf{DIFFICULT}}\\
+		\textbf{GENDER}	&\textbf{yes}	&\textbf{no}	&Total\\
+		\midrule
+		\textbf{male}	&	& &\\
+		\textbf{female}	&	& &\\
+		\midrule
+		Total			&	&	&\\
+		\bottomrule
+		\end{tabular}
+\end{center}
+
+
+
+\begin{enumerate}[a)]
+\item The name of the appropriate test:  \hrulefill
+\item H$_0$: \hrulefill 	
+
+	H$_A$: \hrulefill
+
+
+	 Assumption(s) of the test: \hrulefill
+
+\item $\chi^2=$ \hrulefill\quad Degrees of freedom= \hrulefill\quad $p=$ \hrulefill
+\item Fisher's exact $p$-value: \hrulefill 
+\item Decision: 	\hrulefill
+
+	 Conclusion: \hrulefill
+\end{enumerate}
+
+
+
+\section[Gender vs. eating habits]{Examine whether answers to the question ''How do you like to eat?'' depend on gender.}
+
+
+
+\begin{center}\footnotesize
+		\begin{tabular}{r|C{15mm}C{15mm}|c}
+		\toprule
+			\multicolumn{4}{c}{\textit{Observed frequencies}}\\
+			\midrule
+			&\multicolumn{2}{c|}{\textbf{GENDER}}\\
+		\textbf{EATING}	&\textbf{male}	&\textbf{female}	&Total\\
+		\midrule
+		\textbf{I don't like to eat at all}	&	& &\\		
+		\textbf{I don't like to eat}	&	& &\\
+		\textbf{Indifferent}	&	& &\\
+		\textbf{I like to eat}	&	& &\\
+		\textbf{I like to eat very much}	&	& &\\
+		\midrule
+		Total			&	&	&\\
+		\bottomrule
+		\end{tabular}
+	\hfill
+	\begin{tabular}{r|C{15mm}C{15mm}|c}
+		\toprule
+			\multicolumn{4}{c}{\textit{Expected frequencies}}\\
+			\midrule
+			&\multicolumn{2}{c|}{\textbf{GENDER}}\\
+		\textbf{EATING}	&\textbf{male}	&\textbf{female}	&Total\\
+		\midrule
+		\textbf{I don't like to eat at all}	&	& &\\		
+		\textbf{I don't like to eat}	&	& &\\
+		\textbf{Indifferent}	&	& &\\
+		\textbf{I like to eat}	&	& &\\
+		\textbf{I like to eat very much}	&	& &\\
+		\midrule
+		Total			&	&	&\\
+		\bottomrule
+		\end{tabular}
+\end{center}
+
+
+
+\begin{enumerate}[a)]
+\item The name of the appropriate test:  \hrulefill
+\item H$_0$: \hrulefill 	
+
+	H$_A$: \hrulefill
+
+
+Assumption(s) of the test: \hrulefill
+
+\item $\chi^2=$ \hrulefill\quad Degrees of freedom= \hrulefill\quad $p=$ \hrulefill
+\item Fisher's exact $p$-value: \hrulefill 
+\item Decision: 	\hrulefill
+
+	 Conclusion: \hrulefill
+\end{enumerate}

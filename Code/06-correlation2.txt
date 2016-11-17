@@ -1,0 +1,20 @@
+> cor.test(alcohol,tobacco)
+
+        Pearson's product-moment correlation
+
+data:  alcohol and tobacco
+t = 3.5756, df = 8, p-value = 0.007234
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.3055382 0.9465163
+sample estimates:
+      cor 
+0.7842873 
+> lm(tobacco~alcohol)
+
+Call:
+lm(formula = tobacco ~ alcohol)
+
+Coefficients:
+(Intercept)      alcohol  
+     0.1082       0.6115  
